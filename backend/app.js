@@ -1,6 +1,5 @@
-const path  =require("path");
+const path = require("path");
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -15,36 +14,36 @@ const pickedUpOdersRoutes = require('./routes/pickedUpOders');
 
 
 
-mongoose.connect('mongodb+srv://userone:user0ne@fsdfiles.gpcsd.mongodb.net/Pharma?retryWrites=true&w=majority',{useNewUrlParser: true , useUnifiedTopology: true})
-  .then(()=>{
-    console.log('connected to database!');
-  })
-  .catch(()=>{
-    console.log('connection failed! ');
-  });
-  mongoose.set('useCreateIndex', true);
+mongoose.connect('mongodb+srv://userone:user0ne@fsdfiles.gpcsd.mongodb.net/Pharma?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('connected to database!');
+    })
+    .catch(() => {
+        console.log('connection failed! ');
+    });
+mongoose.set('useCreateIndex', true);
 
 //OJx2X4IllVNl9up4
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/images" , express.static(path.join("images")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use("/images", express.static(path.join("images")));
 
 
-app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With ,Content-Type,Authorization ,Accept",
-    "HTTP/1.1 200 OK",
-    "append,delete,entries,foreach,get,has,keys,set,values,Authorization"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,POST,PATCH,DELETE,OPTIONS,PUT"
-  );
-  next();
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With ,Content-Type,Authorization ,Accept",
+        "HTTP/1.1 200 OK",
+        "append,delete,entries,foreach,get,has,keys,set,values,Authorization"
+    );
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET,POST,PATCH,DELETE,OPTIONS,PUT"
+    );
+    next();
 });
 
 
@@ -108,13 +107,13 @@ app.use((req,res,next)=>{
 //   });
 // });
 
-app.use("/api/supplier",supplierRoutes);
-app.use("/api/inventory",inventoryRoutes);
-app.use("/api/user",userRoutes);
-app.use("/api/sales",salesRoutes);
-app.use("/api/doctorUser",doctorUserRoutes);
-app.use("/api/doctorOder",doctorOderRoutes);
-app.use("/api/verifiedDoctorOder",verifiedDoctorOderRoutes);
-app.use("/api/pickedUpOders",pickedUpOdersRoutes);
+app.use("/api/supplier", supplierRoutes);
+app.use("/api/inventory", inventoryRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/sales", salesRoutes);
+app.use("/api/doctorUser", doctorUserRoutes);
+app.use("/api/doctorOder", doctorOderRoutes);
+app.use("/api/verifiedDoctorOder", verifiedDoctorOderRoutes);
+app.use("/api/pickedUpOders", pickedUpOdersRoutes);
 
 module.exports = app;
