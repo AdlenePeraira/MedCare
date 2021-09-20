@@ -23,7 +23,6 @@ mongoose.connect('mongodb+srv://userone:user0ne@fsdfiles.gpcsd.mongodb.net/Pharm
     });
 mongoose.set('useCreateIndex', true);
 
-//OJx2X4IllVNl9up4
 
 
 app.use(express.json());
@@ -45,67 +44,6 @@ app.use((req, res, next) => {
     );
     next();
 });
-
-
-// app.post("/api/supplier",(req,res,next)=>{
-// const supplier = new Supplier({
-//   supplierID: req.body.supplierID,
-//   name: req.body.name,
-//   email: req.body.email,
-//   contact: req.body.contact,
-//   drugsAvailable: req.body.drugsAvailable
-// });
-// supplier.save().then(createdSupplier=>{
-// res.status(201).json({
-//   message:'Supplier Added Successfully',
-//   supplierId : createdSupplier._id
-// });
-
-// });
-
-// });
-
-// app.put("/api/supplier/:id", (req,res,next)=>{
-//   const supplier = new Supplier({
-//     _id: req.body.id,
-//     supplierID: req.body.supplierID,
-//     name: req.body.name,
-//     email: req.body.email,
-//     contact: req.body.contact,
-//     drugsAvailable: req.body.drugsAvailable
-//   });
-//   Supplier.updateOne({_id: req.params.id}, supplier).then(result => {
-//     console.log(result);
-//     res.status(200).json({message : "Update Successful !"});
-//   });
-// });
-
-// app.get("/api/supplier",(req,res,next)=>{
-//   Supplier.find().then(documents=>{
-//     res.status(200).json({
-//       message : 'supplier added sucessfully',
-//       suppliers :documents
-//     });
-//   });
-// });
-
-
-// app.get("/api/supplier/:id",(req,res,next)=>{
-//   Supplier.findById(req.params.id).then(supplier =>{
-//     if(supplier){
-//       res.status(200).json(supplier);
-//     }else{
-//       res.status(200).json({message:'suplier not found'});
-//     }
-//   });
-// });
-
-// app.delete("/api/supplier/:id", (req, res, next) => {
-//   Supplier.deleteOne({ _id: req.params.id }).then(result => {
-//     console.log(result);
-//     res.status(200).json({ message: 'Supplier deleted!' });
-//   });
-// });
 
 app.use("/api/supplier", supplierRoutes);
 app.use("/api/inventory", inventoryRoutes);
