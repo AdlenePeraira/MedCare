@@ -149,7 +149,7 @@ export class AShoppingCartItemsComponent implements OnInit {
     this.authDoctorUserService.logout();
   }
 
-  onViewUserEmail(email:string){
+  onViewUserEmail(email:string,name:string){
     this.email2 = email;
     this.name = name;
     console.log(this.email2, this.name);
