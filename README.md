@@ -19,7 +19,7 @@ Star :star:  the repo to help the developers :innocent:
 
 # Group Members
 
-->Adlene Peraira (Project Co-ordinator)
-->Akhila T R
-->Jeffrey Jolly
+- Adlene Peraira (Project Co-ordinator)
+- Akhila T R
+- Jeffrey Jolly
 
