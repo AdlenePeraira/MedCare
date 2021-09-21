@@ -7,7 +7,7 @@ Star :star:  the repo to help the developers :innocent:
 
 
 
-## 🚀 Build Instructions / How to start the project 
+## 🚀 How to start the project 
 
 1) Downloard/clone the Contributor branch of the repository
 2) Open terminal/command prompt 
@@ -18,6 +18,8 @@ Star :star:  the repo to help the developers :innocent:
 7) Open your browser and navigate to `http://localhost:4200/`
 
 # Group Members
--Adlene Peraira (Project Co-ordinator)
--Akhila T R
--Jeffrey Jolly
+
+->Adlene Peraira (Project Co-ordinator)
+->Akhila T R
+->Jeffrey Jolly
+
