@@ -3,9 +3,6 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 
-Star :star:  the repo to help the developers :innocent:
-
-
 
 ## 🚀 How to start the project 
 
@@ -17,7 +14,7 @@ Star :star:  the repo to help the developers :innocent:
 6) Run `npm run start:server` to run the backend Node server
 7) Open your browser and navigate to `http://localhost:4200/`
 
-# Group Members
+## Group Members
 
 - Adlene Peraira (Project Co-ordinator)
 - Akhila T R
