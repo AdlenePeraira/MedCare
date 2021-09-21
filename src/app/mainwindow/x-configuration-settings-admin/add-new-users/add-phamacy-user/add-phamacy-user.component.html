@@ -1,75 +1,70 @@
 <div class="box">
-    <!-- <figure class="avatar">
-        <img src="https://placehold.it/128x128">
-    </figure> -->
-    <!-- <a class=" level-item logo-margin" >
-      <img src="https://i.ibb.co/L9X6wKM/pharmacare-logo-hori-tagline-2.png" width="152" height="140">
-    </a><br> -->
-
-    <form [formGroup]="form" (submit)="onDoctorSignup()" >
 
 
-      <div class="field">
-        <div class="control">
+    <form [formGroup]="form" (submit)="onDoctorSignup()">
 
-            <input formControlName="name" class="input is-medium" type="text" placeholder="Doctor Name" autofocus=""  >
-            <!-- <p *ngIf="registerFormControl.name.errors.required">*Supplier ID number is required</p> -->
+
+        <div class="field">
+            <div class="control">
+
+                <input formControlName="name" class="input is-medium" type="text" placeholder="Doctor Name" autofocus="">
+                <!-- <p *ngIf="registerFormControl.name.errors.required">*Supplier ID number is required</p> -->
 
 
 
-        </div>
-    </div><br>
+            </div>
+        </div><br>
 
-    <div class="field">
-      <div class="control">
+        <div class="field">
+            <div class="control">
 
-          <input formControlName="contact"  class="input is-medium" type="text" placeholder="Doctor Contact Number" autofocus=""  >
+                <input formControlName="contact" class="input is-medium" type="text" placeholder="Doctor Contact Number" autofocus="">
 
-          <span class="error-msg" *ngIf="(registerFormControl.contact.touched ) && registerFormControl.contact.errors?.required">
+                <span class="error-msg" *ngIf="(registerFormControl.contact.touched ) && registerFormControl.contact.errors?.required">
             *Drugs Available number is required
           </span>
-      </div>
-    </div><br>
+            </div>
+        </div><br>
 
 
-    <div class="field">
-      <div class="control">
+        <div class="field">
+            <div class="control">
 
-          <input formControlName="nic" class="input is-medium" type="text" placeholder="Doctor SLMC register number" autofocus=""  >
-          <span class="error-msg" *ngIf="(registerFormControl.nic.touched ) && registerFormControl.nic.errors?.required">
+                <input formControlName="nic" class="input is-medium" type="text" placeholder="Doctor SLMC register number" autofocus="">
+                <span class="error-msg" *ngIf="(registerFormControl.nic.touched ) && registerFormControl.nic.errors?.required">
             *Drugs Available number is required
           </span>
 
-      </div>
-    </div><br>
+            </div>
+        </div><br>
 
 
-    <div class="field">
-          <div class="control">
+        <div class="field">
+            <div class="control">
 
-            <input formControlName="email" class="input is-medium" type="email" placeholder="Doctor Email" autofocus="" required email>
-            <span class="error-msg" *ngIf="(registerFormControl.email.touched ) && registerFormControl.email.errors?.required">
+                <input formControlName="email" class="input is-medium" type="email" placeholder="Doctor Email" autofocus="" required email>
+                <span class="error-msg" *ngIf="(registerFormControl.email.touched ) && registerFormControl.email.errors?.required">
               *Drugs Available number is required
             </span>
-          </div>
-    </div><br>
+            </div>
+        </div><br>
 
 
 
-    <div class="field">
-          <div class="control">
+        <div class="field">
+            <div class="control">
 
-              <input formControlName="password" class="input is-medium" type="password" placeholder="Doctor Password" required>
-              <span class="error-msg" *ngIf="(registerFormControl.password.touched ) && registerFormControl.password.errors?.required">
+                <input formControlName="password" class="input is-medium" type="password" placeholder="Doctor Password" required>
+                <span class="error-msg" *ngIf="(registerFormControl.password.touched ) && registerFormControl.password.errors?.required">
                 *Drugs Available number is required
               </span>
-          </div>
-     </div><br>
+            </div>
+        </div><br>
 
-     <div class="field">
-      <label class="label"></label>
-      <div class="file has-name is-full">
-        <label class="file-label">
+        <div class="field">
+            <label class="label"></label>
+            <div class="file has-name is-full">
+                <label class="file-label">
           <button class="file-input" type="button" name="resume" (click)=filePicker.click()></button>
           <input class="file-input" type="file" #filePicker (change)="onImagePicked($event)">
           <span class="file-cta">
@@ -84,11 +79,11 @@
             Image
           </span>
         </label>
-      </div>
-      <!-- <div class="image-preview" *ngIf=" imagePreview !== '' && imagePreview && form.get('image').valid">
+            </div>
+            <!-- <div class="image-preview" *ngIf=" imagePreview !== '' && imagePreview && form.get('image').valid">
         <img [src]="imagePreview" [alt]="form.value.name">
       </div> -->
-    </div><br>
+        </div><br>
 
 
 
