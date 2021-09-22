@@ -11,12 +11,12 @@ export class LoginComponent {
 
   constructor(public authService : AuthService, private sankBar : MatSnackBar){}
 
-  onLogin(form:  NgForm){
-    if(form.invalid){
-      this.sankBar.open("Please enter valid data", 'Close');
-      return;
+  onLogin(form: NgForm){
+    // if(form.invalid){
+    //   this.sankBar.open("Please enter valid data", 'Close');
+    //   return;
 
-    }
+    // }
     this.sankBar.open("Logging... Please wait ", 'Close');
     this.authService.login(form.value.email,form.value.password);
   };

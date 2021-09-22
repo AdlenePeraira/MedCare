@@ -22,7 +22,8 @@
                                 <div class="field">
                                     <div class="control">
                                         <br>
-                                        <input name="email" ngModel #emailInput="ngModel" class="input is-medium" type="email" placeholder="Your Email" autofocus="" required email>
+                                        <input name="email" [class.is-invalid]="emailInput.invalid && emailInput.touched" pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?" ngModel #emailInput="ngModel" class="input is-medium" type="email" placeholder="Your Email" autofocus=""
+                                            required email>
                                         <p class="login-error" *ngIf="!emailInput.valid && emailInput.touched">Please enter valid email</p>
 
                                     </div>

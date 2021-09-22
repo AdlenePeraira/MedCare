@@ -211,6 +211,7 @@ export class InventoryInteractionService {
   }
 
   addInventory( email: string, name: string, quantity: string, batchId: string, expireDate: string, price: string , image: File) {
+    // console.log(email);
     const inventoryData = new FormData();
     inventoryData.append("email", email);
     inventoryData.append("name", name);

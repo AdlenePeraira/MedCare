@@ -46,7 +46,7 @@
                                 <div class="field">
                                     <div class="control"><br>
 
-                                        <input name="contact" ngModel #contactInput="ngModel" class="input is-medium" type="contact" placeholder="Your Contact Number" autofocus="" required>
+                                        <input name="contact" ngModel #contactInput="ngModel" pattern="[0-9]{10}" class="input is-medium" type="contact" [class.is-invalid]="contactInput.invalid && contactInput.touched" placeholder="Your Contact Number" autofocus="" required>
                                         <p class="login-error" *ngIf="contactInput.invalid && contactInput.touched">Please enter valid contact number</p>
 
 
@@ -67,7 +67,8 @@
                                 <div class="field">
                                     <div class="control">
 
-                                        <input name="email" ngModel #emailInput="ngModel" class="input is-medium" type="email" placeholder="Your Email" autofocus="" required email>
+                                        <input name="email" pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?" [class.is-invalid]="emailInput.invalid && emailInput.touched" ngModel #emailInput="ngModel" class="input is-medium" type="email" placeholder="Your Email" autofocus=""
+                                            required email>
                                         <p class="login-error" *ngIf="emailInput.invalid && emailInput.touched">Please enter valid email</p>
 
                                     </div>
@@ -78,7 +79,7 @@
                                 <div class="field">
                                     <div class="control">
 
-                                        <input name="password" ngModel #passwordInput="ngModel" class="input is-medium" type="password" placeholder="Your Password" required>
+                                        <input name="password" ngModel pattern="(?=.*\d)(?=.*[a-z])(?=.*).{8,}" [class.is-invalid]="passwordInput.invalid && passwordInput.touched" #passwordInput="ngModel" class="input is-medium" type="password" placeholder="Your Password" required>
                                         <p class="login-error" *ngIf="passwordInput.invalid && passwordInput.touched">Please enter valid password</p>
 
                                     </div>
@@ -88,7 +89,7 @@
 
 
 
-                                <button class="button is-block is-primary is-medium is-fullwidth">SignUp <i class="fas fas-sign-in" aria-hidden="true"></i></button>
+                                <button class="button is-block is-primary is-medium is-fullwidth" [disabled]="signupForm.form.invalid">SignUp <i class="fas fas-sign-in" aria-hidden="true"></i></button>
                             </form>
 
 
