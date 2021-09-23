@@ -44,7 +44,7 @@ export class AuthDoctorUserService {
 
 
   login(email: string, password){
-    const authDoctorData :AuthDoctorData = {name: name , contact: null , docId: null , email: email , password: password};
+    const authDoctorData :AuthDoctorData = {name: this.name , contact: null , docId: null , email: email , password: password};
     this.http.post<{token: string, expiresIn: number, name:string, contact: string, email:string,docId:string}>("http://localhost:3000/api/doctorUser/doctorLogin",authDoctorData)
       .subscribe(response =>{
         const token= response.token;
