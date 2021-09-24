@@ -54,4 +54,10 @@ app.use("/api/doctorOder", doctorOderRoutes);
 app.use("/api/verifiedDoctorOder", verifiedDoctorOderRoutes);
 app.use("/api/pickedUpOders", pickedUpOdersRoutes);
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join())
+})
+
+
 module.exports = app;

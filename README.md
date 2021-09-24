@@ -1,11 +1,6 @@
 # MedCare
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
-
-
-## About the Project
-
-This Project..
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.This Project is a group work done and deployed in order for MEAN Stack Application development course conducted by ICT Academy of Kerala.The Basic CRUD operations are limited to Dashboard and Suppliers functionalities with multi-user signups and logins provided.We as a group decided to continue with project even after the course.So many functionalities like adding drugs and their information related dependencies are yet to be developed.Kindly forgive us if some functionalities may not work as you desire.
 
 
 
